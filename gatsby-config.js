@@ -7,4 +7,9 @@
 module.exports = {
   /* Your site config here */
   plugins: [],
+  siteMetadata: {
+    title: "My Portfolio",
+    description: "web dev portfolio",
+    copyright: "This website is copyright 2022 robinpunn"
+  }
 }
