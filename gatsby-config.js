@@ -6,7 +6,18 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-transformer-remark`
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/src/projectsText/`,
+      },
+    },
+  ],
   siteMetadata: {
     title: "My Portfolio",
     description: "web dev portfolio",
