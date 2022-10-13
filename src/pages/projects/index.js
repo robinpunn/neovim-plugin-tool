@@ -1,7 +1,7 @@
 import { graphql, Link } from 'gatsby'
 import React from 'react'
 import Layout from '../../components/Layout'
-import {portfolio} from '../../styles/projects.module.css'
+import {portfolio, projects} from '../../styles/projects.module.css'
 
 export default function Project({ data }) {
   console.log(data)
@@ -12,7 +12,7 @@ export default function Project({ data }) {
       <div className={portfolio}>
           <h2>Portfolio</h2>
           <h3>Projects and Websites I've Created</h3>
-          <div>
+          <div className={projects}>
             {getProjects.map(getProjects=> (
               <Link to={"/projectsText/" + getProjects.frontmatter.slug} key={getProjects.id}>
                 <div>
@@ -29,13 +29,13 @@ export default function Project({ data }) {
 
 // export page query
 export const query = graphql`
-  {
-    allMarkdownRemark {
+  query ProjectsPage {
+    allMarkdownRemark(sort: {fields: frontmatter___date, order: ASC}) {
       nodes {
         frontmatter {
-          slug
-          stack
           title
+          stack
+          slug
         }
         id
       }

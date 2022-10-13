@@ -1,7 +1,8 @@
 ---
 title: ZeroToMastery Portfolio
-stack: HTML+CSS, JavaScript, React, Node
+stack: HTML, CSS, JavaScript, React, Node
 slug: zero-to-mastery-portfolio
+date: 2022-01-02T00:00:00+00:00
 ---
 
 **In ex adipisicing aliqua consequat dolore nulla labore ipsum ad aute nulla**, Aliquip in aliquip mollit incididunt non do commodo. Ea sunt labore mollit proident est Lorem sit incididunt ipsum aliquip dolor dolor laborum id. Cillum aliquip commodo consequat voluptate ut fugiat dolore esse magna sunt eu.

@@ -2,6 +2,7 @@
 title: freeCodeCamp Portfolio
 stack: HTML, CSS, JavaScript 
 slug: web3-portfolio
+date: 2022-01-01T00:00:00+00:00
 ---
 
 **In ex adipisicing aliqua consequat dolore nulla labore ipsum ad aute nulla**, Aliquip in aliquip mollit incididunt non do commodo. Ea sunt labore mollit proident est Lorem sit incididunt ipsum aliquip dolor dolor laborum id. Cillum aliquip commodo consequat voluptate ut fugiat dolore esse magna sunt eu.
