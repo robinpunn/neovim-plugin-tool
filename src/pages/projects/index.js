@@ -2,26 +2,30 @@ import { graphql, Link } from 'gatsby'
 import React from 'react'
 import Layout from '../../components/Layout'
 import {portfolio, projects} from '../../styles/projects.module.css'
+import {GatsbyImage, getImage} from 'gatsby-plugin-image'
 
 export default function Project({ data }) {
   console.log(data)
-  const getProjects = data.allMarkdownRemark.nodes
+  const getProjects = data.projects.nodes
+  const contact = data.contact.siteMetadata.contact
 
   return (
     <Layout>
-      <div className={portfolio}>
+        <div className={portfolio}>
           <h2>Portfolio</h2>
           <h3>Projects and Websites I've Created</h3>
           <div className={projects}>
-            {getProjects.map(getProjects=> (
-              <Link to={"/projectsText/" + getProjects.frontmatter.slug} key={getProjects.id}>
+            {getProjects.map(getProject=> (
+              <Link to={"/projectsText/" + getProject.frontmatter.slug} key={getProject.id}>
                 <div>
-                  <h3>{getProjects.frontmatter.title}</h3>
-                  <p>{ getProjects.frontmatter.stack}</p>
+                  <GatsbyImage image={getImage(getProject.frontmatter.thumb)} alt={getProject.frontmatter.slug} />
+                  <h3>{getProject.frontmatter.title}</h3>
+                  <p>{ getProject.frontmatter.stack}</p>
                 </div>
               </Link>
             ))}
           </div>
+          <p>Conatact me at {contact} for more information.</p>
       </div>
     </Layout>
   )
@@ -30,14 +34,30 @@ export default function Project({ data }) {
 // export page query
 export const query = graphql`
   query ProjectsPage {
-    allMarkdownRemark(sort: {fields: frontmatter___date, order: ASC}) {
+    projects: allMarkdownRemark(sort: {fields: frontmatter___date, order: ASC}) {
       nodes {
         frontmatter {
           title
           stack
           slug
+          thumb {
+            childImageSharp {
+              gatsbyImageData(
+                width: 400
+                blurredOptions: {width: 100}
+                placeholder: BLURRED
+                transformOptions: {cropFocus: CENTER}
+                aspectRatio: 0.7
+              )
+            }  
+          }
         }
         id
+      }
+    }
+    contact: site {
+      siteMetadata {
+        contact
       }
     }
   }

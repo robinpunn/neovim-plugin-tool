@@ -1,8 +1,10 @@
 ---
 title: Blockchain Development Portfolio
 stack: Solidity, JavaScript, React, NextJS 
-slug: web3-portfolio
+slug: web3 portfolio
 date: 2022-01-03T00:00:00+00:00
+thumb: ../images/thumb/web3thumb.png
+featuredImg: ../images/featured/alchemyBanner.png
 ---
 
 **In ex adipisicing aliqua consequat dolore nulla labore ipsum ad aute nulla**, Aliquip in aliquip mollit incididunt non do commodo. Ea sunt labore mollit proident est Lorem sit incididunt ipsum aliquip dolor dolor laborum id. Cillum aliquip commodo consequat voluptate ut fugiat dolore esse magna sunt eu.

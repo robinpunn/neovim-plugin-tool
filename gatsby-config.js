@@ -7,9 +7,10 @@
 module.exports = {
   /* Your site config here */
   plugins: [
-    {
-      resolve: `gatsby-transformer-remark`
-    },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -17,10 +18,18 @@ module.exports = {
         path: `${__dirname}/src/projectsText/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
   ],
   siteMetadata: {
     title: "My Portfolio",
     description: "web dev portfolio",
-    copyright: "This website is copyright 2022 robinpunn"
+    copyright: "This website is copyright 2022 robinpunn",
+    contact: "robin.punnoose@protonmail.com"
   }
 }
