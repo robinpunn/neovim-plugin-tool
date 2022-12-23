@@ -10,12 +10,19 @@ export default function Home() {
     <Layout>
       <section className={header}>
         <div>
-          <h2>Design</h2>
+          <h2>Learn</h2>
           <h3>Develop & Deploy</h3>
           <p>Web developer based in Illinois.</p>
-          <Link className={btn} to="/projects">My Portfolio Projects</Link>
+          <Link className={btn} to="/projects">My Web3 Portfolio</Link>
         </div>
-        <StaticImage src="../images/banner.png" alt="" layout="fullWidth"/>
+        <div className="imageHome">
+          <StaticImage
+            src="../images/banner2.png"
+            alt=""
+            layout="fullWidth"
+            style={{ border: "2px  purple", boxShadow: "5px 5px 5px #eee, -5px -5px 5px #ffffff" }}
+          />
+        </div>
       </section>
     </Layout>
   )

@@ -16,13 +16,18 @@ export default function Project({ data }) {
           <h3>Projects and Websites I've Created</h3>
           <div className={projects}>
             {getProjects.map(getProject=> (
-              <Link to={"/projectsText/" + getProject.frontmatter.slug} key={getProject.id}>
                 <div>
-                  <GatsbyImage image={getImage(getProject.frontmatter.thumb)} alt={getProject.frontmatter.slug} />
+                  <Link to={"/projectsText/" + getProject.frontmatter.slug} key={getProject.id}>
+                    <GatsbyImage
+                      image={getImage(getProject.frontmatter.thumb)}
+                      alt={getProject.frontmatter.slug}
+                      layout="fluid"
+                      />
+                  </Link>
                   <h3>{getProject.frontmatter.title}</h3>
                   <p>{ getProject.frontmatter.stack}</p>
                 </div>
-              </Link>
+
             ))}
           </div>
           <p>Conatact me at {contact} for more information.</p>
@@ -43,7 +48,8 @@ export const query = graphql`
           thumb {
             childImageSharp {
               gatsbyImageData(
-                width: 400
+                width: 200
+                height: 200
                 blurredOptions: {width: 100}
                 placeholder: BLURRED
                 transformOptions: {cropFocus: CENTER}

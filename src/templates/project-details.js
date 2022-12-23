@@ -13,7 +13,9 @@ export default function ProjectDetails({data}) {
             <h2>{title}</h2>
             <h3>{stack}</h3>
             <div className={featured}>
-            <GatsbyImage image={getImage(featuredImg.childImageSharp.gatsbyImageData)} alt="Project Details" />
+            <a target="_blank" href="https://buymeacoffee-solidity-defi-tipping-app.robinpunnoose.repl.co/">
+                <GatsbyImage image={getImage(featuredImg.childImageSharp.gatsbyImageData)} alt="Project Details" />
+            </a>
             </div>
             <div className={htmls} dangerouslySetInnerHTML={{ __html: html }} />
         </div>

@@ -27,8 +27,8 @@ module.exports = {
     },
   ],
   siteMetadata: {
-    title: "My Portfolio",
-    description: "web dev portfolio",
+    title: "My Web3 Portfolio",
+    description: "web3 developer portfolio",
     copyright: "This website is copyright 2022 robinpunn",
     contact: "robin.punnoose@protonmail.com"
   }
