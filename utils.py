@@ -10,7 +10,7 @@ BACKUP_DIR = os.path.join(CONFIG_DIR, "backups")
 LUA_PLUGINS_DIR = os.path.join(HOME, ".config", "nvim", "lua", "plugins")
 LUA_PLUGINS_CORE_DIR = os.path.join(HOME, ".config", "nvim", "lua", "core")
 INIT_LUA_FILE = os.path.join(HOME, ".config", "nvim", "init.lua")
-JSON_FILE = os.path.join(CONFIG_DIR, "plugins.json")
+JSON_FILE = os.path.join(HOME,".config", "nvim", "plugins.json")
 
 
 def log_action(action, plugin_name=None, status="in-progress"):

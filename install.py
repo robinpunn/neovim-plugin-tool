@@ -15,10 +15,10 @@ import os
 
 def install_plugins(names=None, force=False, dry_run=False):
     all_plugins = load_plugins()
-
+   
     orphaned_plugins, _ = get_orphaned_plugins(all_plugins)
     to_install = filter_plugins_by_name(orphaned_plugins, names) if names else orphaned_plugins
-
+    
     if not to_install:
         print("Nothing to install.")
         return
