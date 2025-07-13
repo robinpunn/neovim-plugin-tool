@@ -1,14 +1,14 @@
 # Neovim Plugin Tool
 
-A plugin manager cli tool built with python that uses a JSON file to track plugins.
-
-## Current status
-I got lazy. I'm using lazy.nvim.
+A neovim plugin manager cli tool built with python that uses a JSON file to track plugins.
 
 ## Todo
-Add an update feature
-Add a dependency feature
-Update print statements with log function in `utils.py`
+- Add an update feature
+- Add a dependency feature
+- Update print statements with log function in `utils.py`
+
+## Current status
+I got lazy. I'm using lazy.nvim
 
 ## Features
 - Add plugins using `author/name` format
